@@ -1,0 +1,178 @@
+@import '../../../node_modules/@angular/material/theming';
+@import './exo2';
+
+
+$input-color:#b3eee4;
+$main-color: #00c5a4;
+$clear: #008871;
+$dark: #00241e;
+$moome-font: "Exo 2";
+$dark-dividers: rgba($dark, 0.12);
+
+$dark-primary-text: rgba($dark, 0.87);
+$dark-secondary-text: rgba($dark, 0.54);
+$dark-disabled-text: rgba($dark, 0.38);
+$dark-focused: rgba($dark, 0.12);
+$light-primary-text: white;
+$light-secondary-text: rgba(white, 0.7);
+$light-disabled-text: rgba(white, 0.5);
+$light-dividers: rgba(white, 0.12);
+$light-focused: rgba(white, 0.12);
+
+$moome-palette: (
+  50 : #e0f8f4,
+  100 : $input-color,
+  200 : #80e2d2,
+  300 : #4dd6bf,
+  400 : #26ceb2,
+  500 : $main-color,
+  600 : #00bf9c,
+  700 : #00b892,
+  800 : #00b089,
+  900 : #00a378,
+  A100 : #cefff0,
+  A200 : #9bffe0,
+  A400 : #68ffd0,
+  A700 : #4effc8,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+// Foreground palette for light themes.
+$moome-light-theme-foreground: (
+  base:              $dark,
+  divider:           $dark-dividers,
+  dividers:          $dark-dividers,
+  disabled:          $clear,
+  disabled-button:   rgba($dark, 0.26),
+  disabled-text:     $clear,
+  elevation:         $dark,
+  hint-text:         $clear,
+  secondary-text:    $clear,
+  icon:              rgba($dark, 0.54),
+  icons:             rgba($dark, 0.54),
+  text:              rgba($dark, 0.87),
+  slider-min:        rgba($dark, 0.87),
+  slider-off:        rgba($dark, 0.26),
+  slider-off-active: rgba($dark, 0.38),
+);
+
+
+$moome-light-theme-background: (
+  status-bar: map_get($mat-grey, 300),
+  app-bar:    map_get($mat-grey, 100),
+  background: map_get($mat-grey, 50),
+  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+  card:       white,
+  dialog:     white,
+  disabled-button: rgba(black, 0.12),
+  raised-button: white,
+  focused-button: $dark-focused,
+  selected-button: map_get($mat-grey, 300),
+  selected-disabled-button: map_get($mat-grey, 400),
+  disabled-button-toggle: map_get($mat-grey, 200),
+  unselected-chip: map_get($mat-grey, 300),
+  disabled-list-option: map_get($mat-grey, 200),
+);
+
+$moomy-secondary-palette: (
+    50 : #e4e8eb,
+    100 : #bcc6cd,
+    200 : #90a0ab,
+    300 : #637a89,
+    400 : #415e70,
+    500 : #204157,
+    600 : #1c3b4f,
+    700 : #183246,
+    800 : #132a3c,
+    900 : #0b1c2c,
+    A100 : #69b1ff,
+    A200 : #3696ff,
+    A400 : #037cff,
+    A700 : #006fe8,
+    contrast: (
+        50 : $dark,
+        100 : $dark,
+        200 : $dark,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : $dark,
+        A200 : $dark,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$white-palette: (
+    50 : #ffffff,
+    100 : #ffffff,
+    200 : #ffffff,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : $dark,
+        100 : $dark,
+        200 : $dark,
+        300 : $dark,
+        400 : $dark,
+        500 : $dark,
+        600 : $dark,
+        700 : $dark,
+        800 : $dark,
+        900 : $dark,
+        A100 : $dark,
+        A200 : $dark,
+        A400 : $dark,
+        A700 : $dark,
+    )
+);
+.login-container{
+  width: 100%;
+  height: 100%;
+
+}
+
+.admin-login{
+  background: rgba(white, 1) url(/assets/images/admin/administrator.png) no-repeat right;
+  background-size: contain;
+}
+.farmer-login{
+  background: rgba(white, 1) url(/assets/images/farmer/login-farmer.png) no-repeat right;
+  background-size: contain;
+}
+.vet-login{
+  background: rgba(white, 1) url(/assets/images/veterinary/doctor.png) no-repeat right;
+  background-size: contain;
+}
+
+.close-dialog{
+  float: right;
+}

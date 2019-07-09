@@ -1,0 +1,28 @@
+
+
+@import "../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+@import "./assets/css/material-style.scss";
+
+html,
+body {
+  font-family: "Exo 2", "sans-serif";
+  color: $dark;
+  height: 100%;
+}
+
+.paginator {
+  width: 100%;
+  margin: auto;
+  position: sticky;
+  bottom: 0px;
+}
+
+body {
+  margin: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

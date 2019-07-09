@@ -1,0 +1,63 @@
+
+@import './shared';
+
+
+$general-typography:  mat-typography-config(
+  $font-family:   '"Exo 2", "Helvetica Neue", sans-serif',
+  $display-4:     mat-typography-level(112px, 112px, 300),
+  $display-3:     mat-typography-level(56px, 56px, 400),
+  $display-2:     mat-typography-level(45px, 48px, 400),
+  $display-1:     mat-typography-level(34px, 40px, 400),
+  $headline:      mat-typography-level(24px, 32px, 400),
+  $title:         mat-typography-level(20px, 32px, 500),
+  $subheading-2:  mat-typography-level(16px, 28px, 400),
+  $subheading-1:  mat-typography-level(15px, 24px, 400),
+  $body-2:        mat-typography-level(14px, 24px, 500),
+  $body-1:        mat-typography-level(14px, 20px, 400),
+  $caption:       mat-typography-level(12px, 20px, 400),
+  $button:        mat-typography-level(14px, 14px, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+
+$secondary-typography: mat-typography-config(
+  $font-family: 'Exo 2, sans-serif'
+);
+
+
+
+
+// Be sure that you only ever include this mixin once!
+@include mat-core($general-typography);
+
+
+$my-app-primary: mat-palette($moome-palette);
+$my-app-accent:  mat-palette($mat-orange, A200, A100, A400);
+$my-app-warn:    mat-palette($mat-red);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+$my-app-theme-custom: map-merge($my-app-theme, (foreground: $moome-light-theme-foreground, background: $moome-light-theme-background));
+
+
+@include angular-material-theme($my-app-theme-custom);
+
+@include mat-toolbar-typography($secondary-typography);
+
+/*.grey-alternate-theme {
+    $grey-alternate-primary: mat-palette($mat-blue-grey, 800);
+    $grey-alternate-accent:  mat-palette($mat-yellow, 400);
+
+    $grey-alternate-theme: mat-dark-theme($grey-alternate-primary, $grey-alternate-accent);
+
+    // better use 'mat-app-background' class (if your app does not use side-nav)
+    // in 'body' element instead of defining color here.
+    // Both side-nav-container and 'mat-app-background' class gets 'color' defined
+    // according to theme color specified.
+    //color: $dark-blue; //No default color defined in themes apparently
+
+    @include mat-core-theme($grey-alternate-theme);  //angular-material-theme() is an owerkill
+
+    //@include mat-toolbar-typography($secondary-typography);
+
+}*/
