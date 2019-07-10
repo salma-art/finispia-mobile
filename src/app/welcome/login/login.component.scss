@@ -1,0 +1,39 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../../../node_modules/bootstrap/scss/utilities/sizing";
+@import "../../../../node_modules/bootstrap/scss/utilities/position";
+@import "../../../assets/css/shared.scss";
+
+mat-card {
+  @extend .col-12, .offset-md-4, .col-md-4, .mt-5;
+  .field {
+    @extend .row, .py-2;
+    text-align: center;
+    & > div {
+      @extend .col-12;
+      position: relative;
+      input {
+        @extend .p-2, .w-100, .m-auto;
+        border: solid 1px $dark-dividers;
+        padding-left: 32px !important;
+      }
+      i {
+        position: absolute;
+        padding: 7px;
+        font-size: 18px;
+      }
+    }
+  }
+  mat-divider {
+    @extend .mb-4, .position-relative;
+  }
+  .social {
+    @extend .offset-md-2, .col-12, .col-md-8;
+    & > div {
+      @extend .mb-3;
+      div {
+        @extend .col;
+        text-align: center;
+      }
+    }
+  }
+}

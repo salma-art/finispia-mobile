@@ -6,8 +6,8 @@ $input-color:#b3eee4;
 $main-color: #00c5a4;
 $clear: #008871;
 $dark: #00241e;
-$moome-font: "Exo 2";
-$dark-dividers: rgba($dark, 0.12);
+$moome-font: exo2;
+$dark-dividers: rgba($dark, 0.25);
 
 $dark-primary-text: rgba($dark, 0.87);
 $dark-secondary-text: rgba($dark, 0.54);
@@ -19,7 +19,7 @@ $light-disabled-text: rgba(white, 0.5);
 $light-dividers: rgba(white, 0.12);
 $light-focused: rgba(white, 0.12);
 
-$moome-palette: (
+$app-palette: (
   50 : #e0f8f4,
   100 : $input-color,
   200 : #80e2d2,
@@ -40,8 +40,8 @@ $moome-palette: (
       200 : #000000,
       300 : #000000,
       400 : #000000,
-      500 : #000000,
-      600 : #000000,
+      500 : #ffffff,
+      600 : #ffffff,
       700 : #ffffff,
       800 : #ffffff,
       900 : #ffffff,
@@ -53,7 +53,7 @@ $moome-palette: (
 );
 
 // Foreground palette for light themes.
-$moome-light-theme-foreground: (
+$app-light-theme-foreground: (
   base:              $dark,
   divider:           $dark-dividers,
   dividers:          $dark-dividers,
@@ -72,7 +72,7 @@ $moome-light-theme-foreground: (
 );
 
 
-$moome-light-theme-background: (
+$app-light-theme-background: (
   status-bar: map_get($mat-grey, 300),
   app-bar:    map_get($mat-grey, 100),
   background: map_get($mat-grey, 50),
@@ -89,7 +89,7 @@ $moome-light-theme-background: (
   disabled-list-option: map_get($mat-grey, 200),
 );
 
-$moomy-secondary-palette: (
+$app-secondary-palette: (
     50 : #e4e8eb,
     100 : #bcc6cd,
     200 : #90a0ab,
@@ -116,7 +116,7 @@ $moomy-secondary-palette: (
         800 : #ffffff,
         900 : #ffffff,
         A100 : $dark,
-        A200 : $dark,
+        A200 : #ffffff,
         A400 : #ffffff,
         A700 : #ffffff,
     )
@@ -154,25 +154,3 @@ $white-palette: (
         A700 : $dark,
     )
 );
-.login-container{
-  width: 100%;
-  height: 100%;
-
-}
-
-.admin-login{
-  background: rgba(white, 1) url(/assets/images/admin/administrator.png) no-repeat right;
-  background-size: contain;
-}
-.farmer-login{
-  background: rgba(white, 1) url(/assets/images/farmer/login-farmer.png) no-repeat right;
-  background-size: contain;
-}
-.vet-login{
-  background: rgba(white, 1) url(/assets/images/veterinary/doctor.png) no-repeat right;
-  background-size: contain;
-}
-
-.close-dialog{
-  float: right;
-}

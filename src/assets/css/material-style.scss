@@ -1,9 +1,9 @@
 
-@import './shared';
+@import './shared.scss';
 
 
 $general-typography:  mat-typography-config(
-  $font-family:   '"Exo 2", "Helvetica Neue", sans-serif',
+  $font-family:   'exo2, sans-serif',
   $display-4:     mat-typography-level(112px, 112px, 300),
   $display-3:     mat-typography-level(56px, 56px, 400),
   $display-2:     mat-typography-level(45px, 48px, 400),
@@ -22,7 +22,7 @@ $general-typography:  mat-typography-config(
 
 
 $secondary-typography: mat-typography-config(
-  $font-family: 'Exo 2, sans-serif'
+  $font-family: 'exo2, sans-serif'
 );
 
 
@@ -32,12 +32,12 @@ $secondary-typography: mat-typography-config(
 @include mat-core($general-typography);
 
 
-$my-app-primary: mat-palette($moome-palette);
-$my-app-accent:  mat-palette($mat-orange, A200, A100, A400);
+$my-app-primary: mat-palette($app-palette);
+$my-app-accent:  mat-palette($app-secondary-palette, A200, A100, A400);
 $my-app-warn:    mat-palette($mat-red);
 
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-$my-app-theme-custom: map-merge($my-app-theme, (foreground: $moome-light-theme-foreground, background: $moome-light-theme-background));
+$my-app-theme-custom: map-merge($my-app-theme, (foreground: $app-light-theme-foreground, background: $app-light-theme-background));
 
 
 @include angular-material-theme($my-app-theme-custom);
